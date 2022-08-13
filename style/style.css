@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(79, 145, 169) !important;
+}
+#global {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* largeur obligatoire pour être centré */
+  }
+.card{
+    text-align: center;
+    box-shadow: 1px 5px 12px 5px #000 ;
+    border: solid black !important;
+    vertical-align: top;
+    margin: 3% ;
+    border-radius: 1% 1% 15% 15% !important;
+}
+.button{
+    border-radius: 25px;
+    padding: 10px;
+    width: 200px;
+    height: 150px;
+}
+*{
+    text-align: center;
+}
+/* https://www.youtube.com/watch?v=5sC1y6gXaeU */
+
+/* max , si l(écran est inf ou égal alors {...} les lignes se transforme en colonne
+et ce sont les class choix seront mis en colonne*/
+@media (max-width:500px){
+    .navbar{
+        flex-direction: column;
+        height:auto;
+        padding: 20%;
+    }
+}
+@media (max-width:1200px){
+    .card{
+        display:inline-table !important;
+        margin-right: 10%;
+    }
+}
+
+.presentation{
+    
+    margin: 10% !important;
+}
+.toutdroite{
+    align-items: right !important;
+}
