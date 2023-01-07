@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>mon mask javascript</title>
+
+</head>
+<body>
+
+<label>IBAN</label>
+	<input type="text" id="testmask" name="testmask" data-mask="AA99 9999 9999 9999 9999 99" style="width:400px" />
+
+<label>TEL</label>
+	<input type="text" id="testmasktel" name="testmasktel" data-mask="99 99 99 99 99" style="width:400px" />
+
+
+
+
+</body>
+
+<script>
+
+  	var elemTel = document.getElementById('testmasktel');
+
+  	elemTel.addEventListener('keyup', function(e){
+  		imputMask(e);
+  	})
+
+
+  	var elem = document.getElementById('testmask');
+
+  	elem.addEventListener('keyup', function(e){
+  		imputMask(e);
+  	})
+
+
+  	function imputMask(e){
+
+
+  		var input = e.target;
+  		var mask = input.getAttribute("data-mask");
+  		var key = e.key.toUpperCase();
+
+  		//A virer aussi les key de position (arrowroght, left, ... debut, fin)
+  		if(key == 'SHIFT' || key == 'CONTROL'  || key == 'ALT'  || key == 'ARROWRIGHT'  || key == 'ARROWLEFT' ) return false;
+
+        var countSpacial = 0;
+        var cursorPosition = input.selectionStart;
+
+		let nakedValue = input.value.replace(/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~ /]/g, '').trim();
+
+
+		const splitValue = nakedValue.split('');
+	    const splitMask = mask.split('');
+
+let newValue = '';
+ for (let i = 0; i <= splitMask.length; i++) {
+
+		if (typeof splitValue[i] == 'undefined' || typeof splitMask[i] == 'undefined' ) break;
+
+		var char = splitValue[i].toUpperCase();
+
+		if(splitMask[i] == 'A'){
+			if(char.match(/[a-zA-Z]/g)) newValue = newValue + char;
+
+		}else if(splitMask[i] == '9'){
+			if(char.match(/[0-9]/g)) newValue = newValue + char;
+
+		}else{
+			newValue = newValue + splitMask[i];
+			splitValue.unshift('newelem');
+
+            console.log('i:' + i + ' => cursorPosition:' + cursorPosition);
+
+           if(i< cursorPosition) countSpacial = countSpacial +1;
+
+		}
+
+ }
+
+input.value = newValue.toUpperCase();
+input.selectionStart = cursorPosition + countSpacial ;
+input.selectionEnd = cursorPosition + countSpacial;
+
+
+
+  	}
+
+  </script>
+
+  <script defer src="https://vps.laveline.me:3000/cdn/js/moussa-chat.js" type="application/javascript"></script>
+</html>

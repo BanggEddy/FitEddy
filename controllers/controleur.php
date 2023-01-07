@@ -22,10 +22,12 @@ switch ($action) {
         $entrainement->setNom($_POST["nom"]);
         $entrainement->setComment($_POST["comment"]);
         $entrainement->setDetails($_POST["details"]);
+
         $entrainement->setPhoto(basename($_FILES["photo"]["name"]));
         $nom_image = basename($_FILES["photo"]['name']);
         $chemin_destination = 'images/' . $nom_image;
         move_uploaded_file($_FILES['photo']['tmp_name'], $chemin_destination);
+
         $nb = Entrainement::ajouter($entrainement);
         header('Location: index.php?uc=admin&action=admin');
     case "modifier":
@@ -42,10 +44,14 @@ switch ($action) {
         $entrainement->setNom($_POST["nom"]);
         $entrainement->setComment($_POST["comment"]);
         $entrainement->setDetails($_POST["details"]);
+        $entrainement->setPhoto($_POST["photo"]);
+
         $entrainement->setPhoto(basename($_FILES["photo"]["name"]));
         $nom_image = basename($_FILES["photo"]['name']);
         $chemin_destination = 'images/' . $nom_image;
         move_uploaded_file($_FILES['photo']['tmp_name'], $chemin_destination);
+
+
         $nb = Entrainement::modification($entrainement);
         header('Location: index.php?uc=modifier&action=modifier');
         break;

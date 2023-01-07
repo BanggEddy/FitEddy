@@ -1,9 +1,5 @@
 <?php
 include("acceuiladmin.php");
-
-
-
-
 ?>
 
 <br><br>
@@ -20,7 +16,7 @@ include("acceuiladmin.php");
         //Affichage de la page modification
         foreach ($Listpresentation as $presentation) {
             echo
-            "<form method='POST' action='index.php?uc=modifier&action=validemodif&modif=" . $presentation->getid() . "''>
+            "<form method='POST' action='index.php?uc=modifier&action=validemodif&modif=" . $presentation->getid() . "'enctype='multipart/form-data' class='form-control-file'' >
             <div class='form-group'>
                 <label for='formGroupExampleInput'>Nom du produit : </label>
                 <input type='text' class='form-control' id='formGroupExampleInput' placeholder='nom de l'entrainement' name='nom' value='" . $presentation->getnom() . "'>
