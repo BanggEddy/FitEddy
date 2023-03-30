@@ -15,3 +15,5 @@ function connect()
 
     return $connect;
 }
+
+?>

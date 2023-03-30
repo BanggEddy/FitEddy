@@ -181,7 +181,6 @@
 
 
 
-
     <br><br>
     <strong>
       <h2 style="font-family: FontName; ">FitEddy</h2>
@@ -206,29 +205,29 @@
 
   </div>
   </div>
-
-  <div id="carouselExampleControls" class="carousel slide img-thumbnail bg-info" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/presentation1.jpg" class="d-block w-100" alt="...">
+  <j style="text-align:-moz-center;">
+    <div id="carouselExampleControls" class="carousel slide img-thumbnail bg-info" data-bs-ride="carousel" style="width:50% ;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/presentation1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item ">
+          <img src="images/presentation2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/presentation3.jpg" class="d-block w-100" alt="...">
+        </div>
       </div>
-      <div class="carousel-item ">
-        <img src="images/presentation2.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="images/presentation3.jpg" class="d-block w-100" alt="...">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
+  </j>
   <br><br><br>
   <strong>
 
@@ -250,6 +249,3 @@
 
 
   <br><br>
-  <p class="aligncenter bg-info">
-    <img src="imges/acceuil.jpg" class="img-thumbnail bg-dark">
-  </p>

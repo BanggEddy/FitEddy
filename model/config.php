@@ -2,6 +2,6 @@
 
 //constantes de connexion
 define("HOTE", 'localhost');
-define("BDD", 'portfolio');
+define("BDD", 'fiteddy');
 define("UTILISATEUR", 'root');
 define("MDP", '');
