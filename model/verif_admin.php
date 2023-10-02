@@ -18,7 +18,7 @@ if (!empty($_POST['emailadmin']) && !empty($_POST['mdpadmin'])) {
 	if ($res) {
 		$passwordHash = $res['mdp'];
 		if (password_verify($password, $passwordHash)) {
-			header("Location: http://127.0.0.1/PHP/PROJET/MVC/openclas/index.php?uc=admin&action=admin");
+			header("Location: ../index.php?uc=admin&action=admin");
 		} else {
 			header("Location: ../index.php");
 		}

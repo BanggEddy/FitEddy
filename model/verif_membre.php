@@ -18,7 +18,7 @@ if (!empty($_POST['emailmembre']) && !empty($_POST['passwordmembre'])) {
 	if ($res) {
 		$passwordHash = $res['passwordusers'];
 		if (password_verify($password, $passwordHash)) {
-			header("Location: http://127.0.0.1/PHP/PROJET/MVC/openclas/index.php?uc=voir&action=list");
+			header("Location: ../index.php?uc=voir&action=list");
 		} else {
 			header("Location: ../index.php");
 		}

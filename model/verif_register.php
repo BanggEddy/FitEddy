@@ -18,7 +18,7 @@ if (!empty($_POST['emailregister']) && !empty($_POST['passwordregister'])) {
 
 	//Il vérifie si c'est bien passé le processus
 	if ($res) {
-		header("Location: /index.php?uc=voir&action=list");
+		header("Location: ../index.php?uc=voir&action=list");
 	} else {
 		header("Location: ../index.php");
 	}
