@@ -1,12 +1,9 @@
-<?php
-include("acceuiladmin.php");
-
-
-
-
-?>
-
+<?php include("acceuiladmin.php");?>
 <br><br>
+<?php if (!empty($_GET['error'])) : ?>
+        <p class="" style="color: red;">Une erreur est survenue. Veuillez réessayer.</p>
+<?php endif; ?>
+<br>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -17,27 +14,33 @@ include("acceuiladmin.php");
     <div class="col">
         <br>
         <?php
-        //Affichage de la page modification
-        foreach ($Listpresentation as $presentation) {
-            echo
-            "<form method='POST' action='index.php?uc=modifier&action=validemodif&modif=" . $presentation->getid() . "'' enctype='multipart/form-data'>
-            <div class='form-group'>
-                <label for='formGroupExampleInput'>Nom du produit : </label>
-                <input type='text' class='form-control' id='formGroupExampleInput' placeholder='nom de l'entrainement' name='nom' value='" . $presentation->getnom() . "'>
-            </div>
-            <div class='form-group'>
-                <label for='formGroupExampleInput2'>La description de l'entrainement : </label>
-                <input type='text' class='form-control' id='formGroupExampleInput2' placeholder='La description' name='comment' value='" . $presentation->getcomment() . "'>
-                <label for='formGroupExampleInput2'>Les détails de l'entrainement : </label>
-                <input type='text' class='form-control' id='formGroupExampleInput2' placeholder='Les détails' name='details' value='" . $presentation->getdetails() . "'>
-                <label for='formGroupExampleInput2'>Image du produit : </label>
-                <br>
-                <input type='file' name='photo' placeholder='Selectionnez l'image'></textarea>
-                <br><br>
-                <button type='submit' class='btn btn-primary'>Enregistrer</button>
+foreach ($Listpresentation as $presentation) {
+    echo
+    "<form method='POST' action='index.php?uc=modifier&action=validemodif&modif=" . $presentation->getid() . "'' enctype='multipart/form-data'>
+    <div class='form-group'>
+        <label for='formGroupExampleInput'>Nom du produit : </label>
+        <input type='text' class='form-control' id='formGroupExampleInput' placeholder='nom de l'entrainement' name='nom' value='" . $presentation->getnom() . "'>
+    </div>
+    <div class='form-group'>
+        <label for='formGroupExampleInput2'>La description de l'entrainement : </label>
+        <br>
+        <input type='text' class='form-control' id='formGroupExampleInput2' placeholder='La description' name='comment' value='" . $presentation->getcomment() . "'>
+        <br>
+        <label for='formGroupExampleInput2'>Les détails de l'entrainement : </label>
+        <br>
+        <input type='text' class='form-control' id='formGroupExampleInput2' placeholder='Les détails' name='details' value='" . $presentation->getdetails() . "'>
+        <br>
+        <label for='formGroupExampleInput2'>Image du produit : </label>
+        <br>
+        <br>
+        <input type='file' name='photo' name='".$presentation->getphoto()."'>
+        <br><br>
+        <button type='submit' class='btn btn-primary'>Enregistrer</button>
+        <a href='index.php?uc=modifier&action=modifier' type='submit' class='btn btn-secondary'> Retour </a>
+    </div>
+    </form>";
+}
 
-            </div></form>";
-        }
 
         ?>
 

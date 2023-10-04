@@ -1,7 +1,9 @@
 <!-- Navbar -->
 <?php include("header.php"); ?>
+<?php include("verifcheckmembre.php"); ?>
+
 <sec id="haut">
-  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
       <!-- Navbar des membres -->
       <a class="navbar-brand" href="index.php?uc=voir&action=list"> <img src="images/front.jpg" height="50"></a>
@@ -15,11 +17,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-danger" aria-current="page" href="#">Home</a>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Maison
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,7 +30,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dehors
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,7 +42,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Salle de gym
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,8 +53,8 @@
               <li><a class="dropdown-item" href="#">Musculation</a></li>
             </ul>
           </li>
-          <a class="nav-link active" aria-current="page" href="index.php?uc=voir&action=list">Voir les entraînements</a>
-          <a class="nav-link active" aria-current="page" href="index.php">Revenir à la page d'acceuil</a>
+          <a class="nav-link active" aria-current="page" href="index.php?uc=voir&action=list" style="color:white">Voir les entraînements</a>
+          <a class="nav-link active" aria-current="page" href="index.php" style="color:white">Revenir à la page d'acceuil</a>
 
         </ul>
       </div>

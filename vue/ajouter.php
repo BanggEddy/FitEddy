@@ -1,7 +1,13 @@
 <?php include("acceuiladmin.php") ?>
+<br>
+<?php if (!empty($_GET['error'])) : ?>
+        <p class="" style="color: red;">Une erreur est survenue. Veuillez réessayer.</p>
+    <?php endif; ?>
+    <br>
 
 <!-- Formulaire pour Ajouter-->
-
+<h2> Ajouter un entraînement </h2>
+<br>
 <div class="container">
   <form method="POST" action="index.php?uc=ajouter&action=valideajouter" enctype="multipart/form-data" class="form-control-file">
     <div class="mb-10">
