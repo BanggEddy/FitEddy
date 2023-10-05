@@ -30,7 +30,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form method="POST" action="model/verif_admin.php">
+                    <form method="POST" action="controllers/verif_admin.php">
 
                       <label> Email : </label> <input type="text" placeholder="Votre  Identifiant" type="email" placeholder="Email" name="emailadmin" required />
                       <br>
@@ -64,7 +64,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form method="POST" action="model/verif_register.php">
+                    <form method="POST" action="controllers/verif_register.php">
 
                       <label> Email : </label> <input type="email" placeholder="Email" name="emailregister" required />
                       <br>
@@ -96,7 +96,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form method="POST" action="model/verif_membre.php">
+                    <form method="POST" action="controllers/verif_membre.php">
 
                       <label> Email : </label> <input type="text" placeholder="Votre  Identifiant" name="emailmembre" required />
                       <br>

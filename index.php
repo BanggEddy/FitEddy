@@ -52,7 +52,7 @@ switch($uc){
         include("vue/send.php");
         break;
     case "deconnexion":
-        include("vue/deconnexion.php");
+        include("controllers/deconnexion.php");
         break;
 }
 
