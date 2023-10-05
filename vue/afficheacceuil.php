@@ -1,4 +1,6 @@
-<?php include("acceuilmembre.php"); ?>
+<!-- Navbar membre -->
+
+<?php include("navbarmembre.php"); ?>
 
 <br><br>
 

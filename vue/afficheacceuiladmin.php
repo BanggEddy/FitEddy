@@ -1,4 +1,6 @@
-<?php include("acceuiladmin.php"); ?>
+<!-- Navbar admin -->
+
+<?php include("navbaradmin.php"); ?>
 
 <br><br>
 

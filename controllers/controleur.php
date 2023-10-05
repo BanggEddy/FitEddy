@@ -8,7 +8,7 @@ switch ($action) {
         break;
     case "admin":
         $Listpresentation = Entrainement::afficherTous();
-        include "vue/afficheacceuiladmin.php";
+        include "vue/affichenavbaradmin.php";
         break;
     case "recherche":
         $Listpresentation = Entrainement::Recherche();

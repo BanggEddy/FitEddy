@@ -24,9 +24,6 @@ switch($uc){
     case "voir":
         include("controllers/controleur.php");
         break;
-    case "membre":
-        include("controllers/controleur.php");
-        break;
     case "register":
         include("vue/accueil.php");
         break;
@@ -48,7 +45,15 @@ switch($uc){
     case "suppression" :
         include("controllers/controleur.php");
         break ;
-    
+    case "contact":
+        include("vue/contact.php");
+        break;
+    case "send":
+        include("vue/send.php");
+        break;
+    case "deconnexion":
+        include("vue/deconnexion.php");
+        break;
 }
 
 include("vue/header.php");

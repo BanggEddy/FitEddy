@@ -1,10 +1,8 @@
-<?php include("acceuiladmin.php") ?>
+<?php include("navbaradmin.php") ?>
 <br>
-<?php if (!empty($_GET['error'])) : ?>
-        <p class="" style="color: red;">Une erreur est survenue. Veuillez réessayer.</p>
-    <?php endif; ?>
-    <br>
-
+    <?php if(!empty($_GET['error'])): ?>
+    <div class="alert alert-danger">Une erreur est survenue. Veuillez réessayer.</div>
+<?php endif; ?>
 <!-- Formulaire pour Ajouter-->
 <h2> Ajouter un entraînement </h2>
 <br>

@@ -1,4 +1,4 @@
-
+<?php include("header.php"); ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <a class="navbar-brand" href="index.php?uc=admin&action=admin"> <img src="images/front.jpg" height="45"></a>
@@ -32,9 +32,9 @@
                   <div class="modal-body">
                     <form method="POST" action="model/verif_admin.php">
 
-                      <label> Email : </label> <input type="text" placeholder="Votre  Identifiant" type="email" placeholder="Email" name="emailadmin">
+                      <label> Email : </label> <input type="text" placeholder="Votre  Identifiant" type="email" placeholder="Email" name="emailadmin" required />
                       <br>
-                      <label> Mot De Passe : </label> <input type="password" placeholder="Mot de passe" name="mdpadmin">
+                      <label> Mot De Passe : </label> <input type="password" placeholder="Mot de passe" name="mdpadmin" required />
                       <br>
                       <input type="submit" value="Valider" class='btn btn-dark'>
                     </form>
@@ -66,9 +66,9 @@
                   <div class="modal-body">
                     <form method="POST" action="model/verif_register.php">
 
-                      <label> Email : </label> <input type="email" placeholder="Email" name="emailregister">
+                      <label> Email : </label> <input type="email" placeholder="Email" name="emailregister" required />
                       <br>
-                      <label> Mot De Passe : </label> <input type="password" placeholder="Mot de passe" name="passwordregister">
+                      <label> Mot De Passe : </label> <input type="password" placeholder="Mot de passe" name="passwordregister" required />
                       <br>
                       <input type="submit" value="Valider" class='btn btn-dark'>
                     </form>
@@ -98,9 +98,9 @@
                   <div class="modal-body">
                     <form method="POST" action="model/verif_membre.php">
 
-                      <label> Email : </label> <input type="text" placeholder="Votre  Identifiant" name="emailmembre">
+                      <label> Email : </label> <input type="text" placeholder="Votre  Identifiant" name="emailmembre" required />
                       <br>
-                      <label> Mot De Passe : </label> <input type="password" placeholder="Votre  Mot De Passe" name="passwordmembre">
+                      <label> Mot De Passe : </label> <input type="password" placeholder="Votre  Mot De Passe" name="passwordmembre" required />
                       <br>
                       <input type="submit" value="Valider" class='btn btn-dark'>
                     </form>

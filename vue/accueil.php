@@ -1,15 +1,15 @@
 <body>
 
-  <!-- Navbar -->
+  <!-- Header -->
   <section id="haut">
 <?php include('navbarindex.php') ?>
-
-    <br><br>
-    <strong>
-      <h2 style="font-family: FontName; ">FitEddy</h2>
-    </strong>
+  <br><br>
+  <strong>
+    <h2 style="font-family: FontName; ">FitEddy</h2>
+  </strong>
 
   </section>
+<!-- Page d'accueil -->
 
   <br><br>
   <strong>
@@ -18,7 +18,6 @@
       Quelle est la différence entre activité sportive et activité physique ?
       <br><br><br>
   </strong>
-
 
   Sport, exercice physique, remise en forme, sport santé... De nombreux termes existent autour de l’activité physique et soyons honnête, il est parfois compliqué de s’y retrouver.
   <br><br>

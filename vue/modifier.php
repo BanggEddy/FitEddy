@@ -1,4 +1,6 @@
-<?php include("acceuiladmin.php"); ?>
+<!-- Navbar Admin -->
+
+<?php include("navbaradmin.php"); ?>
 <br><br>
 
 <div class="container">

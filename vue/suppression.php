@@ -1,4 +1,4 @@
-<?php include("acceuiladmin.php");?>
+<?php include("navbaradmin.php");?>
 <br><br>
 
 <div class="container">
@@ -8,7 +8,7 @@
    <div class="col">
    <br> 
   <?php
-       //Affichage de la page modification
+       //Affichage de la page suppression
       foreach($Listpresentation as $presentation) 
       {
        echo "

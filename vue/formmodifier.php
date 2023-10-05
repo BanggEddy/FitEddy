@@ -1,9 +1,12 @@
-<?php include("acceuiladmin.php");?>
+<!-- Navbar admin -->
+
+<?php include("navbaradmin.php");?>
 <br><br>
 <?php if (!empty($_GET['error'])) : ?>
         <p class="" style="color: red;">Une erreur est survenue. Veuillez réessayer.</p>
 <?php endif; ?>
 <br>
+<!-- Page Modif -->
 
 <div class="container">
     <div class="row justify-content-center">
@@ -13,6 +16,8 @@
     </div>
     <div class="col">
         <br>
+<!-- Formulaire pour Modification -->
+
         <?php
 foreach ($Listpresentation as $presentation) {
     echo
