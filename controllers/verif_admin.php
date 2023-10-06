@@ -1,7 +1,7 @@
 <?php
 // Démarrez la session (assurez-vous de l'avoir démarrée dans vos autres fichiers PHP)
 session_start();
-require("../model/fonctions.php");
+require("../model/connexion.php");
 // Requête pour vérifier le compte membre
 $db = connect();
 
@@ -36,4 +36,3 @@ if (!empty($_POST['emailadmin']) && !empty($_POST['mdpadmin'])) {
         exit(); // Assurez-vous de terminer le script après la redirection
     }
 }
-?>

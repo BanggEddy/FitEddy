@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("../model/fonctions.php");
+require("../model/connexion.php");
 // Requête pour ajouter un membre
 
 $bdd = connect();

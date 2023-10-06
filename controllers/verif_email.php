@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -8,7 +9,7 @@ require './phpmailer/src/SMTP.php';
 
 $error = ""; // Initialize an error variable
 
-if(isset($_POST['send'])){
+if (isset($_POST['send'])) {
     $name = htmlentities($_POST['name']);
     $email = htmlentities($_POST['email']);
     $subject = htmlentities($_POST['subject']);
@@ -22,18 +23,22 @@ if(isset($_POST['send'])){
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'EMAIL';
-        $mail->Password = 'PASSWORD_APP';
+        $mail->Username = 'email';
+        $mail->Password = 'apppassword';
         $mail->Port = 465;
         $mail->SMTPSecure = 'ssl';
         $mail->isHTML(true);
         $mail->setFrom($email, $name);
-        $mail->addAddress('EMAIL');
+        $mail->addAddress('email');
         $mail->Subject = ("$email ($subject)");
         $mail->Body = $message;
         $mail->send();
 
-        header("Location: ./index.php?uc=contact");
+        if ($mail->send()) {
+            $_SESSION['email_sent'] = true;
+            $confirmation_message = "L'e-mail a été envoyé avec succès.";
+        } else {
+            $error = "Erreur lors de l'envoi de l'e-mail.";
+        }
     }
 }
-?>

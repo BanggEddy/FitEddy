@@ -9,11 +9,18 @@ include('./controllers/verif_email.php')
 
 
 <!-- Display Error Message -->
-<?php if(!empty($error)): ?>
-    <div class="alert alert-danger"><?php echo $error; ?></div>
+<?php if (!empty($error)) : ?>
+  <div class="alert alert-danger"><?php echo $error; ?></div>
+<?php endif; ?>
+<!-- Display Email Sent Confirmation -->
+<?php if (isset($_SESSION['email_sent']) && $_SESSION['email_sent'] === true) : ?>
+  <div class="alert alert-success">L'e-mail a été envoyé avec succès.</div>
+  <?php unset($_SESSION['email_sent']); // Réinitialise la variable de session 
+  ?>
 <?php endif; ?>
 
 <!-- Formulaire pour Contact -->
+
 <body class="center-absolute">
   <form class="container mt-5" method="post">
     <div class="form-group">
@@ -36,4 +43,3 @@ include('./controllers/verif_email.php')
 </body>
 
 </html>
-
