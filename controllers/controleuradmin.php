@@ -14,6 +14,10 @@ switch ($action) {
         $Listpresentation = Entrainement::Recherche();
         include "vue/afficheacceuil.php";
         break;
+    case "rechercheadmin":
+        $Listpresentation = Entrainement::Recherche();
+        include "vue/afficheacceuiladmin.php";
+        break;
     case "valideajouter":
         $nom = $_POST["nom"];
         $comment = $_POST["comment"];

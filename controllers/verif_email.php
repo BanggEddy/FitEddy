@@ -23,7 +23,7 @@ if (isset($_POST['send'])) {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'email';
-        $mail->Password = 'mdpapp';
+        $mail->Password = 'mdp';
         $mail->Port = 465;
         $mail->SMTPSecure = 'ssl';
         $mail->isHTML(true);

@@ -9,7 +9,7 @@
       <a class="navbar-brand" href="index.php?uc=admin&action=admin"> <img src="images/front.jpg" height="50"></a>
       <a class="nav-link" href="index.php?uc=admin&action=admin" style="color:white;">FitEddy <span class="sr-only">(current)</span></a>
 
-      <form class="d-flex" method="POST" action='index.php?uc=recherche&action=recherche'>
+      <form class="d-flex" method="POST" action='index.php?uc=rechercheadmin&action=rechercheadmin'>
         <input class="form-control me-2" type="search" placeholder="Rechercher des entraînements" aria-label="Recherche" name="recherche" style="width: 300px;">
         <input class="btn btn-danger" type="submit" value="Rechercher">
       </form>
