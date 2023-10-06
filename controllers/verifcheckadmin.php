@@ -1,18 +1,25 @@
 <?php
-// Vérifiez si l'utilisateur est connecté en vérifiant la session
-if (isset($_SESSION['connected']) && $_SESSION['connected'] === true) {
-    // L'utilisateur est connecté, vous pouvez exécuter du code pour les utilisateurs authentifiés ici
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["emailadmin"];
+    $password = $_POST["passwordadmin"];
 
-    // Exemple : Récupérez l'ID de l'administrateur s'il est stocké dans la session
+    // Récupérez l'ID de l'administrateur s'il est stocké dans la session
     if (isset($_SESSION['admin_id'])) {
-        $adminId = $_SESSION['admin_id'];
-        // Faites quelque chose avec l'ID de l'administrateur, si nécessaire
-    }
+        // L'administrateur est authentifié avec succès
 
-    // Si l'utilisateur est déjà connecté, vous pouvez autoriser l'accès à la page ou exécuter d'autres actions
-} else {
-    // L'utilisateur n'est pas connecté, redirigez-le vers la page de connexion ou effectuez d'autres actions
-    header("Location: index.php");
-    exit(); // Assurez-vous de terminer le script après la redirection
+        // Vérification de la case "Remember Me"
+        $rememberMe = isset($_POST["remember_me"]);
+
+        // Création du cookie si "Remember Me" est coché
+        if ($rememberMe) {
+            // Le cookie expirera dans 30 jours (86400 * 30)
+            setcookie("admin_email", $email, time() + 86400 * 30, "/");
+        }
+
+        header("Location: index.php");
+        exit();
+    } else {
+        // Authentification échouée, affichez un message d'erreur
+        echo "Identifiants incorrects.";
+    }
 }
-?>

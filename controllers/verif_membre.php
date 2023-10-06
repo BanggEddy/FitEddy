@@ -21,17 +21,17 @@ if (!empty($_POST['emailmembre']) && !empty($_POST['passwordmembre'])) {
         $passwordHash = $res['passwordusers'];
         if (password_verify($password, $passwordHash)) {
             // L'authentification a réussi, créons la session pour les membres
-            $_SESSION['member_id'] = $res['id']; // Vous pouvez stocker des informations supplémentaires si nécessaire
+            $_SESSION['member_id'] = $res['id'];
 
             // Redirigez l'utilisateur vers la page après la connexion
             header("Location: ../index.php?uc=voir&action=list");
-            exit(); // Assurez-vous de terminer le script après la redirection
+            exit();
         } else {
             header("Location: ../index.php");
-            exit(); // Assurez-vous de terminer le script après la redirection
+            exit();
         }
     } else {
         header("Location: ../index.php");
-        exit(); // Assurez-vous de terminer le script après la redirection
+        exit();
     }
 }

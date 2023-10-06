@@ -20,19 +20,17 @@ if (!empty($_POST['emailadmin']) && !empty($_POST['mdpadmin'])) {
         $passwordHash = $res['mdp'];
         if (password_verify($password, $passwordHash)) {
             // L'authentification a réussi, créons la session
-            $_SESSION['connected'] = true;
-
-            $_SESSION['id'] = $res['id']; // Vous pouvez stocker des informations supplémentaires si nécessaire
+            $_SESSION['id'] = $res['id'];
 
             // Redirigez l'utilisateur vers la page d'administration
             header("Location: ../index.php?uc=admin&action=admin");
-            exit(); // Assurez-vous de terminer le script après la redirection
+            exit();
         } else {
             header("Location: ../index.php");
-            exit(); // Assurez-vous de terminer le script après la redirection
+            exit();
         }
     } else {
         header("Location: ../index.php");
-        exit(); // Assurez-vous de terminer le script après la redirection
+        exit();
     }
 }

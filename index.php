@@ -47,7 +47,6 @@ switch ($uc) {
     case "recherche":
         include("controllers/controleuradmin.php");
         break;
-        break;
     case "modifier":
         include("controllers/controleuradmin.php");
         break;

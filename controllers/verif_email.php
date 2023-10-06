@@ -7,7 +7,7 @@ require './phpmailer/src/Exception.php';
 require './phpmailer/src/PHPMailer.php';
 require './phpmailer/src/SMTP.php';
 
-$error = ""; // Initialize an error variable
+$error = "";
 
 if (isset($_POST['send'])) {
     $name = htmlentities($_POST['name']);
@@ -15,7 +15,6 @@ if (isset($_POST['send'])) {
     $subject = htmlentities($_POST['subject']);
     $message = htmlentities($_POST['message']);
 
-    // Add your email validation logic here
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Invalid email format. Please enter a valid email address.";
     } else {
@@ -24,7 +23,7 @@ if (isset($_POST['send'])) {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'email';
-        $mail->Password = 'apppassword';
+        $mail->Password = 'mdpapp';
         $mail->Port = 465;
         $mail->SMTPSecure = 'ssl';
         $mail->isHTML(true);
